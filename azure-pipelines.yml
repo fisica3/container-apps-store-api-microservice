@@ -93,7 +93,8 @@ stages:
               scriptLocation: 'inlineScript'
               inlineScript: |
                 az --version
-                az upgrade                
+                az upgrade --yes
+                az --version               
                 az group create -g $(RESOURCE_GROUP_apps-store) -l 'canadacentral'
                 az deployment group create -g $(RESOURCE_GROUP_apps-store) -f deploy/main.bicep --verbose -p \
                 minReplicas=0 \
