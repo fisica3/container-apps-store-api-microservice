@@ -107,4 +107,4 @@ stages:
                 containerRegistry=$(containerRegistry) \
                 containerRegistryUsername=$(registryUsername) \
                 containerRegistryPassword=$(registryPassword) \ 
-                deployApim='true' 
+                deployApim=true 
