@@ -89,7 +89,7 @@ stages:
           - task: AzureCLI@2
             inputs:
               azureSubscription: 'scazuresponsorship'
-              scriptType: 'bash'
+              scriptType: 'pscore'
               scriptLocation: 'inlineScript'
               inlineScript: |
                 az --version
