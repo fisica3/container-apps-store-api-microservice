@@ -97,10 +97,6 @@ stages:
                 az --version               
                 az group create -g $(RESOURCE_GROUP_apps-store) -l 'eastus2'
                 az deployment group create --resource-group $(RESOURCE_GROUP_apps-store) --template-file deploy/main.bicep --verbose `
-                --parameters minReplicas=0 nodeImage='repasowebappacr.azurecr.io/container-apps-store-api-microservice/node-service:2305' `                
-                --parameters pythonImage='repasowebappacr.azurecr.io/container-apps-store-api-microservice/python-service:2305' `                
-                --parameters goImage='repasowebappacr.azurecr.io/container-apps-store-api-microservice/go-service:2305' `                
-                --parameters containerRegistry=repasowebappacr.azurecr.io `
-                --parameters containerRegistryUsername=repasowebappacr `
-                --parameters containerRegistryPassword=QK1k1qej7gDrwoxdJISD4gGQFJr3OxP= ` 
-                --parameters deployApim=true 
+                --parameters minReplicas=0 nodeImage='repasowebappacr.azurecr.io/container-apps-store-api-microservice/node-service:2305' pythonImage='repasowebappacr.azurecr.io/container-apps-store-api-microservice/python-service:2305' `                
+                --parameters goImage='repasowebappacr.azurecr.io/container-apps-store-api-microservice/go-service:2305' containerRegistry=repasowebappacr.azurecr.io `
+                --parameters containerRegistryUsername=repasowebappacr containerRegistryPassword=QK1k1qej7gDrwoxdJISD4gGQFJr3OxP= parameters deployApim=true 
