@@ -103,5 +103,5 @@ stages:
                 goImage='repasowebappacr.azurecr.io/container-apps-store-api-microservice/go-service:2305' \                
                 containerRegistry=repasowebappacr.azurecr.io \
                 containerRegistryUsername=repasowebappacr \
-                containerRegistryPassword=$(registryPassword) \ 
+                containerRegistryPassword=QK1k1qej7gDrwoxdJISD4gGQFJr3OxP= \ 
                 deployApim=true 
