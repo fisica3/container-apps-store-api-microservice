@@ -38,7 +38,7 @@ param containerName string = 'orders'
 @maxValue(1000000)
 param autoscaleMaxThroughput int = 4000
 
-var accountName_var = toLower(accountName)
+var nombreCuenta = toLower(accountName)
 var consistencyPolicy = {
   Eventual: {
     defaultConsistencyLevel: 'Eventual'
@@ -67,7 +67,7 @@ var locations = [
 ]
 
 resource accountName_resource 'Microsoft.DocumentDB/databaseAccounts@2021-01-15' = {
-  name: accountName_var
+  name: nombreCuenta
   kind: 'GlobalDocumentDB'
   location: location
   properties: {
