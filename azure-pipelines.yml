@@ -98,10 +98,10 @@ stages:
                 az group create -g $(RESOURCE_GROUP_apps-store) -l 'canadacentral'
                 az deployment group create -g $(RESOURCE_GROUP_apps-store) -f deploy/main.bicep --verbose -p \
                 minReplicas=0 \
-                nodeImage='$(containerRegistry)/$(imageRepositorynode):$(tag)' \                
-                pythonImage='$(containerRegistry)/$(imageRepositorypython):$(tag)' \                
-                goImage='$(containerRegistry)/$(imageRepositorygo):$(tag)' \                
-                containerRegistry=$(containerRegistry) \
-                containerRegistryUsername=$(registryUsername) \
+                nodeImage='repasowebappacr.azurecr.io/container-apps-store-api-microservice/node-service:2305' \                
+                pythonImage='repasowebappacr.azurecr.io/container-apps-store-api-microservice/python-service:2305' \                
+                goImage='repasowebappacr.azurecr.io/container-apps-store-api-microservice/go-service:2305' \                
+                containerRegistry=repasowebappacr.azurecr.io \
+                containerRegistryUsername=repasowebappacr \
                 containerRegistryPassword=$(registryPassword) \ 
                 deployApim=true 
