@@ -23,8 +23,7 @@ param containerRegistry string
 param containerRegistryUsername string = 'testUser'
 @secure()
 param containerRegistryPassword string = ''
-@secure()
-param registryPassword string
+param registryPassword string = 'registry-password'
 
 
 // Container Apps Environment 
