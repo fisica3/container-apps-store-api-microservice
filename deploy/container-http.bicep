@@ -7,7 +7,8 @@ param isExternalIngress bool
 param containerRegistry string
 param containerRegistryUsername string
 param isPrivateRegistry bool
-param enableIngress bool 
+param enableIngress bool
+@secure()
 param registryPassword string
 param minReplicas int = 0
 param secrets array = []
