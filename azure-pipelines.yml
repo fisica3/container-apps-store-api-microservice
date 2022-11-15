@@ -98,12 +98,9 @@ stages:
                 az group create -g $(RESOURCE_GROUP_apps-store) -l 'canadacentral'
                 az deployment group create -g $(RESOURCE_GROUP_apps-store) -f deploy/main.bicep --verbose -p \
                 minReplicas=0 \
-                nodeImage='$(containerRegistry)/$(imageRepositorynode):$(tag)' \
-                nodePort=3000 \
-                pythonImage='$(containerRegistry)/$(imageRepositorypython):$(tag)' \
-                pythonPort=5000 \
-                goImage='$(containerRegistry)/$(imageRepositorygo):$(tag)' \
-                goPort=8050 \
+                nodeImage='$(containerRegistry)/$(imageRepositorynode):$(tag)' \                
+                pythonImage='$(containerRegistry)/$(imageRepositorypython):$(tag)' \                
+                goImage='$(containerRegistry)/$(imageRepositorygo):$(tag)' \                
                 containerRegistry=$(containerRegistry) \
                 containerRegistryUsername=$(registryUsername) \
                 containerRegistryPassword=$(registryPassword) \ 
